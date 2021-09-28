@@ -1,0 +1,106 @@
+/* Apply to all elements -- border for testing */
+* {
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    font-family: "Google Sans Text", "Source Sans Pro", "Roboto", "Arial", "sans serif";
+}
+
+/* Body -- apply these to overall body, not elements just biggest container */
+body {
+    /* uncomment to get body stick body to the frame.*/
+    margin: 0px;
+    /* border: 1px solid black; */
+    width: 100%;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    background-color: rgb(51, 51, 51);
+    /* margin: 10px 0px; */
+}
+
+.navbar a{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    /* border: 1px solid green !important; */
+}
+
+.navbar a:hover {
+    background-color: rgb(221, 221, 221);
+    color: rgb(0, 0, 0);
+}
+
+
+/* header section, only for .head class */
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 156, 156);
+}
+
+/* apply to all h1, h2 headings */
+h1, h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* for heading in .head class, use these values */
+header > h1, h2 {
+    color: rgb(134, 51, 18);
+}
+
+
+/* Main  content styling*/
+.row {
+    /* margin: 10px 0px; */
+    display: flex;
+}
+
+.sidebar {
+    background-color: rgb(84, 221, 80);
+    flex: 1;
+    height: 400px;
+    /* margin: 0px 5px 0px 0px; */
+}
+
+.main {
+    background-color: rgb(52, 86, 197);
+    flex:3;
+    height: 400px;
+    /* margin: 0px 0px 0px 5px; */
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #777;
+    /* margin: 10px 0px; */
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+}
+
+footer button {
+    padding: 6px;
+}
+
+/* Media queries for responsive design*/
+@media screen and (max-width:700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* When screen size is < 480, use these properties 
+alongside above defined properties */
+@media screen and (max-width: 400px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
